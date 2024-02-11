@@ -1,0 +1,21 @@
+#!/bin/bash
+IFS=$`\n`
+lin=0
+echo "Enter the content to be checked"
+read con
+for i in (cat df.txt)
+do
+lin=$ ($lin+1)
+echo $i
+cow=$(echo $i |wc -w)
+echo $cow
+for ((j=1;j<=$cow;j++))
+do
+cont=$(echo $i | cut -d " " -f $j)
+if [[ $cont == $con ]]
+then
+echo "content $con present in $cont field in the line number $lin"
+fi
+done
+echo "==================================="
+done
