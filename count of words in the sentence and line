@@ -1,0 +1,15 @@
+#!/bin/bash
+ech " Enter the content to be checked"
+read con
+echo "Enter the field number"
+read fe
+lin=0
+for i in $(cat df.txt)
+do
+lin=$(($lin+1))
+split=$(echo $i |cut -d ":" -f $fe)
+if [[ $split == $con ]]
+then
+echo "Content $con present in field $fe in the line number $lin"
+fi
+done
