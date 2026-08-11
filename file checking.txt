@@ -1,6 +1,3 @@
-#file checking the full path and incase of weather file is not present in the server create new file and give the user permission to access
-
-
 #!/bin/bash
 echo "Enter the file complete path"
 read fil
