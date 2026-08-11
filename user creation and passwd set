@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in "dhanraj" "pavanraj" "megharaj" "nagaraj" "kiran" "vinay" "thejaswini"
+for i in "dhanraj"
 do
 col=$(grep $i /etc/passwd |wc -l)
 if [[ $col -gt 0 ]]
