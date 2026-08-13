@@ -58,10 +58,10 @@ gzip $fil
 ls -ltr $fil.gz
 elif [[ $usropt -eq 7 ]]
 then
-echo "ENTER THE DESTINATION PATH WITH FILENAME"
-read des
-cp -v $fil $des
-ls -ltr $des
+echo "Enter the file destination with file name"
+read destination
+cp -v $fil $destination
+ls -ltr $destination
 fi
 else
 echo "File $fil not created successfully due to permission issue"
